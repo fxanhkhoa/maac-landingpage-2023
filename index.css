@@ -1,0 +1,175 @@
+@font-face {
+	font-family: clash;
+	src: url("./fonts/SVN-ClashDisplay-Regular.otf");
+}
+
+@font-face {
+	font-family: clash;
+	src: url("./fonts/SVN-ClashDisplay-Bold.otf");
+	font-weight: bold;
+}
+
+@font-face {
+	font-family: clash;
+	src: url("./fonts/SVN-ClashDisplay-Semibold.otf");
+	font-weight: 600;
+}
+
+@font-face {
+	font-family: grotesk;
+	src: url("./fonts/SVN-ClashGrotesk-Regular.otf");
+}
+
+@font-face {
+	font-family: grotesk;
+	src: url("./fonts/SVN-ClashGrotesk-Bold.otf");
+	font-weight: bold;
+}
+
+@font-face {
+	font-family: grotesk;
+	src: url("./fonts/SVN-ClashGrotesk-Medium.otf");
+	font-weight: 500;
+}
+
+@font-face {
+	font-family: grotesk;
+	src: url("./fonts/SVN-ClashGrotesk-Semibold.otf");
+	font-weight: 600;
+}
+
+@font-face {
+	font-family: archivo;
+	src: url("./fonts/Archivo-Regular.ttf");
+}
+
+@font-face {
+	font-family: archivo;
+	src: url("./fonts/Archivo-ExtraBold.ttf");
+	font-weight: 800;
+}
+
+@font-face {
+	font-family: archivo;
+	src: url("./fonts/Archivo-Light.ttf");
+	font-weight: 300;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: clash;
+}
+
+.header-3d-button {
+	box-shadow: -1px -1px 0px 1px rgba(255, 255, 255, 0.75);
+	-webkit-box-shadow: -1px -1px 0px 1px rgba(255, 255, 255, 0.75);
+	-moz-box-shadow: -1px -1px 0px 1px rgba(255, 255, 255, 0.75);
+}
+
+.promotion-text-selected {
+	background: radial-gradient(circle, #efbb60 0%, #b27523 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.promotion-text {
+	color: #846a46;
+}
+
+#envelop-part {
+	background: url("/images/bg-1.png") no-repeat;
+	background-size: cover;
+}
+
+#advise {
+	background: url("/images/bg-2.png") no-repeat;
+	background-size: cover;
+}
+
+#advise .text-gradient {
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+#promotion {
+	background: url("/images/bg-3.png") no-repeat;
+	background-size: cover;
+}
+
+#attendance {
+	background: url("/images/bg-4.png") no-repeat;
+	background-size: cover;
+}
+
+#vfx {
+	background: url("/images/bg-5.png") no-repeat;
+	background-size: cover;
+}
+
+#reason {
+	background: url("/images/bg-6-bis.png") no-repeat;
+	background-size: cover;
+}
+
+.maac-1 {
+	background: url("/images/bg-7.png") no-repeat;
+	background-size: cover;
+}
+
+.maac-2 {
+	background: url("/images/bg-7-2.png") no-repeat;
+	background-size: cover;
+}
+
+.maac-3 {
+	background: url("/images/bg-7-3.png") no-repeat;
+	background-size: cover;
+}
+
+#teacher {
+	background: url("/images/bg-8.png") no-repeat;
+	background-size: cover;
+}
+
+#teacher .image-square {
+	background: url("/images/background-teacher.png") no-repeat;
+	background-size: cover;
+}
+
+#why-maac {
+	background: url("/images/bg-9.png") no-repeat;
+	background-size: cover;
+}
+
+#opportunity {
+	background: url("/images/bg-10.png") no-repeat;
+	background-size: cover;
+}
+
+#video {
+	background: url("/images/bg-11.png") no-repeat;
+	background-size: cover;
+}
+
+.text-gradient {
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.frame-video {
+	background: url("/images/video-frame.png") no-repeat;
+	background-size: contain;
+}
+
+.glow-text {
+	text-shadow: 0 0 12px #fff;
+}
+
+.teacher-effect {
+	color: #ffee10;
+	box-shadow: 0 0 16px #ffee10;
+	text-shadow: 0 0 5px #ffee10;
+}

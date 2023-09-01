@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="index.css" />
+	</head>
+	<body class="antialiased">
+		<script src="https://cdn.tailwindcss.com"></script>
+		<nav class="bg-black fixed w-full z-50">
+			<div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+				<div class="relative flex h-16 items-center justify-between">
+					<div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+						<!-- Mobile menu button-->
+						<button
+							type="button"
+							class="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+							aria-controls="mobile-menu"
+							aria-expanded="false"
+						>
+							<span class="sr-only">Open main menu</span>
+							<svg
+								class="block h-6 w-6"
+								fill="none"
+								viewBox="0 0 24 24"
+								stroke-width="1.5"
+								stroke="currentColor"
+								aria-hidden="true"
+							>
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+								/>
+							</svg>
+							<!--
+            Icon when menu is open.
+
+            Menu open: "block", Menu closed: "hidden"
+          -->
+							<svg
+								class="hidden h-6 w-6"
+								fill="none"
+								viewBox="0 0 24 24"
+								stroke-width="1.5"
+								stroke="currentColor"
+								aria-hidden="true"
+							>
+								<path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+							</svg>
+						</button>
+					</div>
+					<div class="flex items-center items-stretch justify-between md:justify-around w-full">
+						<div class="flex items-center">
+							<a href="#"
+								><img class="h-10 w-auto cursor-pointer" src="/images/logo.webp" alt="Your Company"
+							/></a>
+						</div>
+						<div class="hidden sm:ml-6 sm:block my-auto">
+							<div class="flex space-x-8">
+								<!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+								<a
+									href="#"
+									style="font-family: grotesk"
+									class="bg-black px-3 py-2 text-sm font-semibold rounded-full border header-3d-button text-[#ffcb0e]"
+									aria-current="page"
+									>1800 2096</a
+								>
+								<a
+									href="#"
+									style="font-family: grotesk"
+									class="bg-black px-3 py-2 text-sm font-semibold rounded-full border header-3d-button text-[#ffcb0e]"
+									aria-current="page"
+									>26 Phan Liêm, Đa Kao, Quận 1, HCM</a
+								>
+							</div>
+						</div>
+						<div class="mt-4">
+							<a href="#">
+								<img src="/images/tu-van-ngay.png" alt="Tư vấn ngay" />
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Mobile menu, show/hide based on menu state. -->
+			<div class="sm:hidden" id="mobile-menu">
+				<div class="flex justify-between gap-2 px-2 pb-3 pt-2">
+					<a
+						href="#"
+						style="font-family: grotesk"
+						class="bg-black px-3 py-2 text-sm font-semibold rounded-full border header-3d-button text-[#ffcb0e]"
+						aria-current="page"
+						>1800 2096</a
+					>
+					<a
+						href="#"
+						style="font-family: grotesk"
+						class="bg-black px-3 py-2 text-sm font-semibold rounded-full border header-3d-button text-[#ffcb0e]"
+						aria-current="page"
+						>26 Phan Liêm, Đa Kao, Quận 1, HCM</a
+					>
+				</div>
+			</div>
+		</nav>
+
+		<main>
+			<div class="hidden lg:block fixed right-0 top-1/2 -translate-y-48 pr-5 z-10">
+				<img src="images/menu-doc.png" class="w-32 h-96" />
+				<div class="flex flex-col items-center transform -translate-y-48 gap-5" style="font-family: archivo">
+					<a
+						class="promotion-text promotion-text-selected font-semibold text-center w-28"
+						id="promotion-menu"
+						href="#promotion"
+						onclick="menuClick(1)"
+						>PROMOTION</a
+					>
+					<a
+						class="promotion-text font-semibold text-center break-words w-28"
+						id="tin-menu"
+						href="#reason"
+						onclick="menuClick(2)"
+						>TIN THỊ TRƯỜNG</a
+					>
+					<a
+						class="promotion-text font-semibold text-center w-28"
+						id="maac-menu"
+						href="#why-maac"
+						onclick="menuClick(3)"
+						>TIN VỀ MAAC</a
+					>
+				</div>
+			</div>
+			<section id="envelop-part" class="flex justify-center pt-36 pb-10 lg:pb-0 lg:pt-10 lg:px-40">
+				<a href="#">
+					<img src="/images/banner1.png" alt="Ưu đãi" class="relative z-20" />
+				</a>
+			</section>
+
+			<section id="advise" class="-translate-y-16 md:-translate-y-16 lg:-translate-y-40 relative p-3">
+				<div
+					class="flex justify-center mt-48 mx-auto h-full bg-[#252e39] pt-5 w-[390.5px] md:w-[500px]"
+					style="font-family: archivo"
+				>
+					<h1
+						class="text-xl md:text-4xl text-white font-extrabold"
+						style="line-height: 1.25"
+					>
+						NHẬN TƯ VẤN TẠI ĐÂY
+					</h1>
+				</div>
+				<div id="getfly-optin-form-iframe-1691134570260" class=""></div>
+				<script type="text/javascript">
+					(function () {
+						var r = window.document.referrer != "" ? window.document.referrer : window.location.origin;
+						var regex = /(https?:\/\/.*?)\//g;
+						var furl = regex.exec(r);
+						r = furl ? furl[0] : r;
+						var f = document.createElement("iframe");
+						const url_string = new URLSearchParams(window.location.search);
+						var utm_source, utm_campaign, utm_medium, utm_content, utm_term;
+						if (
+							(!url_string.has("utm_source") || url_string.get("utm_source") == "") &&
+							document.cookie.match(new RegExp("utm_source" + "=([^;]+)")) != null
+						) {
+							r += "&" + document.cookie.match(new RegExp("utm_source" + "=([^;]+)"))[0];
+						} else {
+							r +=
+								url_string.get("utm_source") != null
+									? "&utm_source=" + url_string.get("utm_source")
+									: "";
+						}
+						if (
+							(!url_string.has("utm_campaign") || url_string.get("utm_campaign") == "") &&
+							document.cookie.match(new RegExp("utm_campaign" + "=([^;]+)")) != null
+						) {
+							r += "&" + document.cookie.match(new RegExp("utm_campaign" + "=([^;]+)"))[0];
+						} else {
+							r +=
+								url_string.get("utm_campaign") != null
+									? "&utm_campaign=" + url_string.get("utm_campaign")
+									: "";
+						}
+						if (
+							(!url_string.has("utm_medium") || url_string.get("utm_medium") == "") &&
+							document.cookie.match(new RegExp("utm_medium" + "=([^;]+)")) != null
+						) {
+							r += "&" + document.cookie.match(new RegExp("utm_medium" + "=([^;]+)"))[0];
+						} else {
+							r +=
+								url_string.get("utm_medium") != null
+									? "&utm_medium=" + url_string.get("utm_medium")
+									: "";
+						}
+						if (
+							(!url_string.has("utm_content") || url_string.get("utm_content") == "") &&
+							document.cookie.match(new RegExp("utm_content" + "=([^;]+)")) != null
+						) {
+							r += "&" + document.cookie.match(new RegExp("utm_content" + "=([^;]+)"))[0];
+						} else {
+							r +=
+								url_string.get("utm_content") != null
+									? "&utm_content=" + url_string.get("utm_content")
+									: "";
+						}
+						if (
+							(!url_string.has("utm_term") || url_string.get("utm_term") == "") &&
+							document.cookie.match(new RegExp("utm_term" + "=([^;]+)")) != null
+						) {
+							r += "&" + document.cookie.match(new RegExp("utm_term" + "=([^;]+)"))[0];
+						} else {
+							r += url_string.get("utm_term") != null ? "&utm_term=" + url_string.get("utm_term") : "";
+						}
+						if (
+							(!url_string.has("utm_user") || url_string.get("utm_user") == "") &&
+							document.cookie.match(new RegExp("utm_user" + "=([^;]+)")) != null
+						) {
+							r += "&" + document.cookie.match(new RegExp("utm_user" + "=([^;]+)"))[0];
+						} else {
+							r += url_string.get("utm_user") != null ? "&utm_user=" + url_string.get("utm_user") : "";
+						}
+						if (
+							(!url_string.has("utm_account") || url_string.get("utm_account") == "") &&
+							document.cookie.match(new RegExp("utm_account" + "=([^;]+)")) != null
+						) {
+							r += "&" + document.cookie.match(new RegExp("utm_account" + "=([^;]+)"))[0];
+						} else {
+							r +=
+								url_string.get("utm_account") != null
+									? "&utm_account=" + url_string.get("utm_account")
+									: "";
+						}
+						r += "&full_url=" + encodeURIComponent(window.location.href);
+						f.setAttribute(
+							"src",
+							"https://maac.getflycrm.com/api/forms/viewform/?key=yUeM7BmJ8y0fhVYE7u6gxvN2lIf9Dxicwf9rvfoOXoi1Rp2MSS&referrer=" +
+								r
+						);
+						f.style.width = "100%";
+						f.style.height = "600px";
+						f.setAttribute("frameborder", "0");
+						f.setAttribute("marginheight", "0");
+						f.setAttribute("marginwidth", "0");
+						var s = document.getElementById("getfly-optin-form-iframe-1691134570260");
+						s.appendChild(f);
+					})();
+				</script>
+			</section>
+
+			<section id="promotion" class="flex justify-center pt-10">
+				<a href="#" class="-translate-y-20">
+					<img src="/images/promotion.png" alt="Promotion" />
+				</a>
+			</section>
+
+			<section id="attendance">
+				<div class="flex flex justify-center pt-10">
+					<img src="/images/doi-tuong-text.png" alt="Promotion" />
+				</div>
+				<div class="flex flex justify-center pt-5 flex-wrap">
+					<img src="/images/attendance-3.png" alt="Promotion" />
+					<img src="/images/attendance-2.png" alt="Promotion" class="md:-translate-x-4" />
+					<img src="/images/attendance-1.png" alt="Promotion" class="md:-translate-x-10" />
+				</div>
+			</section>
+
+			<section id="vfx">
+				<img src="/images/3d.png" alt="vfx" class="pl-5 pt-60" />
+				<div class="flex gap-5 lg:pl-16 flex-wrap justify-center lg:justify-start">
+					<img src="/images/vfx-1.png" alt="vfx-1" />
+					<img src="/images/vfx-2.png" alt="vfx-2" />
+					<img src="/images/vfx-3.png" alt="vfx-3" />
+				</div>
+				<div class="flex justify-center mt-16 translate-y-20 z-20 relative">
+					<img src="/images/vfx-text.png" alt="vfx-text" />
+				</div>
+			</section>
+
+			<section id="reason" class="relative pb-12">
+				<div class="flex justify-center pt-32">
+					<img src="/images/vfx-reason-text.png" alt="reason-text" />
+				</div>
+				<img src="images/par-1.png" class="absolute top-0 left-0" />
+				<img src="images/par-2.png" class="absolute bottom-0 right-0" />
+
+				<div class="pt-2 xl:px-48 2xl:px-48">
+					<div class="border border-yellow-500 lg:p-20 2xl:p-24 flex flex-col gap-20 shadow-lg">
+						<div class="flex">
+							<div
+								class="flex flex-wrap lg:flex-nowrap justify-center lg:justify-start gap-5 lg:gap-5 2xl:gap-5"
+							>
+								<img
+									src="/images/01-reason-text.png"
+									alt="01"
+									class="hidden lg:block w-48 h-48 my-auto"
+								/>
+								<div class="flex flex-col justify-center gap-2 divide-y">
+									<h1
+										class="text-xl lg:text-3xl 2xl:text-3xl text-white text-center lg:text-left uppercase"
+										style="font-family: grotesk"
+									>
+										NHIỀU "ĐẤT DỤNG VÕ"
+									</h1>
+									<h2
+										class="text-white text-sm lg:text-base text-center lg:text-left font-light"
+										style="font-family: archivo"
+									>
+										VFX-3D-GAMES được ứng dụng vào nhiều lĩnh vực. Cơ hội việc làm rộng mở tại hàng
+										loạt các Studio lớn trong ngành như: Sparx* - A Virtuos Studio, AIOI Studios,
+										NCSOFT, Alien Media, Zodiac II Studio, Synapse Studio,...
+									</h2>
+								</div>
+								<img src="/images/01-reason.png" alt="01" class="h-96 w-auto lg:h-56" />
+							</div>
+						</div>
+						<div class="flex">
+							<div
+								class="flex flex-wrap lg:flex-nowrap justify-center lg:justify-start gap-5 lg:gap-5 2xl:gap-5"
+							>
+								<img src="/images/02-reason.png" alt="01" class="h-96 w-auto lg:h-56" />
+								<div class="flex flex-col justify-center gap-2 divide-y">
+									<h1
+										class="text-xl lg:text-3xl 2xl:text-3xl text-white text-center lg:text-left uppercase"
+										style="font-family: grotesk"
+									>
+										THỪA VIỆC - THIẾU NGƯỜI
+									</h1>
+									<h2
+										class="text-white text-sm lg:text-base text-center lg:text-left font-light"
+										style="font-family: archivo"
+									>
+										Các Studio trong và ngoài nước thường xuyên đưa tìm kiếm Artist tại thị trường
+										Việt Nam để tham gia vào hàng loạt các dự án lớn nhỏ.
+									</h2>
+								</div>
+								<img
+									src="/images/02-reason-text.png"
+									alt="01"
+									class="hidden lg:block w-48 h-48 my-auto"
+								/>
+							</div>
+						</div>
+						<div class="flex">
+							<div
+								class="flex flex-wrap lg:flex-nowrap justify-center lg:justify-start gap-5 lg:gap-5 2xl:gap-5"
+							>
+								<img
+									src="/images/03-reason-text.png"
+									alt="01"
+									class="hidden lg:block w-48 h-48 my-auto"
+								/>
+								<div class="flex flex-col justify-center gap-2 divide-y">
+									<h1
+										class="text-xl lg:text-3xl 2xl:text-3xl text-white text-center lg:text-left uppercase"
+										style="font-family: grotesk"
+									>
+										Tính chất công việc sáng tạo - đổi mới từng ngày
+									</h1>
+									<h2
+										class="text-white text-sm lg:text-base text-center lg:text-left font-light"
+										style="font-family: archivo"
+									>
+										Công việc đề cao tính sáng tạo - logic, mỗi dự án đều có những dấu ấn riêng.
+										Không gây gò bó, nhàm chán!
+									</h2>
+								</div>
+								<img src="/images/03-reason.png" alt="01" class="h-96 w-auto lg:h-56" />
+							</div>
+						</div>
+						<div class="flex">
+							<div
+								class="flex flex-wrap lg:flex-nowrap justify-center lg:justify-start gap-5 lg:gap-5 2xl:gap-5"
+							>
+								<img src="/images/04-reason.png" alt="01" class="h-96 w-auto lg:h-56" />
+								<div class="flex flex-col justify-center gap-2 divide-y">
+									<h1
+										class="text-xl lg:text-3xl 2xl:text-3xl text-white text-center lg:text-left uppercase"
+										style="font-family: grotesk"
+									>
+										Thu nhập hấp dẫn
+									</h1>
+									<h2
+										class="text-white text-sm lg:text-base text-center lg:text-left font-light"
+										style="font-family: archivo"
+									>
+										Mức lương khởi điểm hấp dẫn lên đến 8 chữ số. Vị trí càng cao mức lương càng
+										tăng. Bạn có thể lựa chọn làm việc cho Studio hoặc freelance, chủ động nguồn thu
+										nhập.
+									</h2>
+								</div>
+								<img
+									src="/images/04-reason-text.png"
+									alt="01"
+									class="hidden lg:block w-48 h-48 my-auto"
+								/>
+							</div>
+						</div>
+						<div class="flex justify-center">
+							<a href="#">
+								<img src="/images/tu-van-ngay-reason.png" alt="01" class="z-10" />
+							</a>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section id="maac" class="maac-1">
+				<div class="flex justify-center pt-20">
+					<img src="/images/tu-co-ban-den.png" alt="basic" />
+				</div>
+				<div class="flex justify-between relative">
+					<img
+						src="/images/left.png"
+						class="lg:absolute left-16 top-1/2 cursor-pointer z-30 w-10 h-10 my-auto lg:w-auto lg:h-auto"
+						onclick="cthClick(-1)"
+					/>
+					<div class="flex justify-center w-full">
+						<img
+							id="cth-char-1"
+							src="/images/char-female.png"
+							class="translate-y-12 hidden lg:block z-10"
+							style="max-height: 900px; max-width: 100%"
+						/>
+						<img
+							id="cth-char-3"
+							src="/images/female-char-3.png"
+							class="translate-y-12 hidden lg:block z-10 lg:hidden"
+							style="max-height: 900px; max-width: 900px"
+						/>
+						<div class="flex flex-col justify-center gap-3 lg:-translate-x-24" id="cth-1">
+							<h1
+								class="text-2xl lg:text-5xl text-center text-white glow-text font-medium"
+								style="font-family: grotesk"
+							>
+								- GAME ART & DESIGN -
+							</h1>
+							<img
+								src="/images/game-art-design.png"
+								class="object-contain w-full md:w-full"
+								style="max-width: 900px"
+							/>
+						</div>
+						<div
+							class="relative z-20 flex flex-col justify-center gap-3 lg:translate-x-40 hidden"
+							id="cth-2"
+						>
+							<h1
+								class="text-2xl lg:text-5xl text-center text-white glow-text font-medium"
+								style="font-family: grotesk"
+							>
+								- 3D ANIMATION -
+							</h1>
+							<img
+								src="/images/3d-animation.png"
+								class="object-contain w-full md:w-full"
+								style="max-width: 900px"
+							/>
+						</div>
+						<div
+							class="relative z-20 flex flex-col justify-center gap-3 lg:-translate-x-48 hidden"
+							id="cth-3"
+						>
+							<h1
+								class="text-2xl lg:text-5xl text-center text-white glow-text font-medium"
+								style="font-family: grotesk"
+							>
+								- VISUAL EFFECTS -
+							</h1>
+							<img
+								src="/images/visual-effect.png"
+								class="object-contain w-full md:w-full"
+								style="max-width: 900px"
+							/>
+						</div>
+						<img
+							id="cth-char-2"
+							src="/images/female-char-2.png"
+							class="translate-y-0 hidden lg:block z-10 lg:hidden"
+							style="max-height: 900px; max-width: 900px"
+						/>
+					</div>
+					<img
+						src="/images/right.png"
+						class="lg:absolute right-16 top-1/2 cursor-pointer z-30 w-10 h-10 my-auto lg:w-auto lg:h-auto"
+						onclick="cthClick(1)"
+					/>
+					<img
+						src="/images/GAME-ART-DESIGN-bottom.png"
+						class="w-full absolute bottom-0 left-0"
+						id="cth-text-1"
+					/>
+					<img
+						src="/images/visual-effect-text.png"
+						class="w-full absolute bottom-0 left-0 hidden"
+						id="cth-text-3"
+					/>
+				</div>
+			</section>
+
+			<section id="teacher" class="pb-10">
+				<div class="flex justify-center pt-20">
+					<img src="/images/doi-ngu-giang-vien.png" alt="basic" />
+				</div>
+
+				<div class="flex justify-between gap-3 pt-20 pl-2 lg:pl-20 lg:px-20">
+					<div class="flex flex-col gap-2 lg:gap-5 my-auto">
+						<div class="flex gap-2 lg:gap-5">
+							<div
+								class="border image-square p-2 transition duration-300 ease-in-out teacher-effect scale-110"
+								id="teacher-1"
+								onmouseover="teacherHover(1)"
+							>
+								<img src="/images/thay-1.png" />
+							</div>
+							<div
+								class="border image-square p-2 transition duration-300 ease-in-out"
+								id="teacher-2"
+								onmouseover="teacherHover(2)"
+							>
+								<img src="/images/thay-2.png" />
+							</div>
+							<div
+								class="border image-square p-2 transition duration-300 ease-in-out"
+								id="teacher-3"
+								onmouseover="teacherHover(3)"
+							>
+								<img src="/images/thay-3.png" />
+							</div>
+						</div>
+						<div class="flex gap-2 lg:gap-5">
+							<div
+								class="border image-square p-2 transition duration-300 ease-in-out"
+								id="teacher-4"
+								onmouseover="teacherHover(4)"
+							>
+								<img src="/images/thay-4.png" />
+							</div>
+							<div
+								class="border image-square p-2 transition duration-300 ease-in-out"
+								id="teacher-5"
+								onmouseover="teacherHover(5)"
+							>
+								<img src="/images/thay-5.png" />
+							</div>
+							<div
+								class="border image-square p-2 transition duration-300 ease-in-out"
+								id="teacher-6"
+								onmouseover="teacherHover(6)"
+							>
+								<img src="/images/thay-6.png" />
+							</div>
+						</div>
+						<div class="flex">
+							<img
+								src="/images/square-thay-1.png"
+								alt=""
+								class="mix-blend-lighten transition duration-300 ease-in-out"
+								id="square-teacher-1"
+							/>
+							<img
+								src="/images/square-thay-2.png"
+								alt=""
+								class="mix-blend-lighten hidden transition duration-300 ease-in-out"
+								id="square-teacher-2"
+							/>
+							<img
+								src="/images/square-thay-3.png"
+								alt=""
+								class="mix-blend-lighten hidden transition duration-300 ease-in-out"
+								id="square-teacher-3"
+							/>
+							<img
+								src="/images/square-thay-4.png"
+								alt=""
+								class="mix-blend-lighten hidden transition duration-300 ease-in-out"
+								id="square-teacher-4"
+							/>
+							<img
+								src="/images/square-thay-5.png"
+								alt=""
+								class="mix-blend-lighten hidden transition duration-300 ease-in-out"
+								id="square-teacher-5"
+							/>
+							<img
+								src="/images/square-thay-6.png"
+								alt=""
+								class="mix-blend-lighten hidden transition duration-300 ease-in-out"
+								id="square-teacher-6"
+							/>
+						</div>
+					</div>
+
+					<div
+						class="flex flex-col relative -translate-y-5 lg:-translate-y-20 transition duration-300 ease-in-out"
+						id="diamond-teacher-1"
+					>
+						<img src="/images/diamond-thay-1.png" alt="" class="pr-2 lg:pr-20" />
+						<img src="/images/thay-1-text.png" alt="" class="absolute top-2/3 right-0" />
+					</div>
+
+					<div
+						class="flex flex-col relative -translate-y-5 lg:-translate-y-20 hidden transition duration-300 ease-in-out"
+						id="diamond-teacher-2"
+					>
+						<img src="/images/diamond-thay-2.png" alt="" class="pr-2 lg:pr-20" />
+						<img src="/images/thay-2-text.png" alt="" class="absolute top-2/3 right-0" />
+					</div>
+
+					<div
+						class="flex flex-col relative -translate-y-5 lg:-translate-y-20 hidden transition duration-300 ease-in-out"
+						id="diamond-teacher-3"
+					>
+						<img src="/images/diamond-thay-3.png" alt="" class="pr-2 lg:pr-20" />
+						<img src="/images/thay-3-text.png" alt="" class="absolute top-2/3 right-0" />
+					</div>
+
+					<div
+						class="flex flex-col relative -translate-y-5 lg:-translate-y-20 hidden transition duration-300 ease-in-out"
+						id="diamond-teacher-4"
+					>
+						<img src="/images/diamond-thay-4.png" alt="" class="pr-2 lg:pr-20" />
+						<img src="/images/thay-4-text.png" alt="" class="absolute top-2/3 right-0" />
+					</div>
+
+					<div
+						class="flex flex-col relative -translate-y-5 lg:-translate-y-20 hidden transition duration-300 ease-in-out"
+						id="diamond-teacher-5"
+					>
+						<img src="/images/diamond-thay-5.png" alt="" class="pr-2 lg:pr-20" />
+						<img src="/images/thay-5-text.png" alt="" class="absolute top-2/3 right-0" />
+					</div>
+
+					<div
+						class="flex flex-col relative -translate-y-5 lg:-translate-y-20 hidden transition duration-300 ease-in-out"
+						id="diamond-teacher-6"
+					>
+						<img src="/images/diamond-thay-6.png" alt="" class="pr-2 lg:pr-20" />
+						<img src="/images/thay-6-text.png" alt="" class="absolute top-2/3 right-0" />
+					</div>
+				</div>
+			</section>
+
+			<section id="why-maac">
+				<div class="flex justify-center pt-20 lg:pb-32">
+					<a href="#">
+						<img src="/images/tim-hieu-ngay.png" alt="basic" class="h-24 w-auto" />
+					</a>
+				</div>
+
+				<div class="flex justify-center pt-20 lg:pt-24">
+					<img src="/images/vi-sao-chon-maac-title.png" />
+				</div>
+
+				<div class="px-3 lg:px-10 pt-20 flex gap-5 justify-center flex-wrap lg:flex-nowrap">
+					<img src="/images/vi-sao-chon-maac-list.png" class="lg:h-96 lg:w-auto" />
+					<img src="/images/vi-sao-img-1.png" class="lg:h-96 lg:w-auto" id="why-img-1" />
+					<img src="/images/vi-sao-img-2.png" class="hidden lg:h-96 lg:w-auto" id="why-img-2" />
+					<img src="/images/vi-sao-img-3.png" class="hidden lg:h-96 lg:w-auto" id="why-img-3" />
+					<img src="/images/vi-sao-img-4.png" class="hidden lg:h-96 lg:w-auto" id="why-img-4" />
+					<div class="flex lg:flex-col justify-center gap-3">
+						<div
+							class="border rounded-full p-1 border-[#d0af7f] cursor-pointer"
+							id="why-1"
+							onclick="whyClick(1)"
+						>
+							<div class="rounded-full bg-[#d0af7f] w-4 h-4"></div>
+						</div>
+						<div class="rounded-full p-1 border-[#d0af7f] cursor-pointer" id="why-2" onclick="whyClick(2)">
+							<div class="rounded-full bg-[#d0af7f] w-4 h-4"></div>
+						</div>
+						<div class="rounded-full p-1 border-[#d0af7f] cursor-pointer" id="why-3" onclick="whyClick(3)">
+							<div class="rounded-full bg-[#d0af7f] w-4 h-4"></div>
+						</div>
+						<div class="rounded-full p-1 border-[#d0af7f] cursor-pointer" id="why-4" onclick="whyClick(4)">
+							<div class="rounded-full bg-[#d0af7f] w-4 h-4"></div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section id="opportunity" class="pb-20 pt-12 lg:pt-72">
+				<div class="flex justify-center pt-20">
+					<img src="/images/co-hoi-viec-lam.png" />
+				</div>
+
+				<div class="flex justify-center pt-10">
+					<img src="/images/opportunity-subtitle.png" />
+				</div>
+
+				<div class="px-5 lg:px-56 grid grid-cols-12 gap-5 lg:gap-10 space-y-5 pt-20" id="logo-1">
+					<img src="/images/BADCLAY.png" class="col-span-2 h-20 w-auto object-scale-down my-auto mx-auto" />
+					<img src="/images/SPARX.png" class="col-span-2 h-20 w-auto object-scale-down my-auto mx-auto" />
+					<img src="/images/CYCLO.png" class="col-span-2 h-20 w-auto object-scale-down my-auto mx-auto" />
+					<img src="/images/SPARTA.png" class="col-span-2 h-20 w-auto object-scale-down my-auto mx-auto" />
+					<img src="/images/SPICE.png" class="col-span-2 h-20 w-auto object-scale-down my-auto mx-auto" />
+					<img src="/images/COLORY.png" class="col-span-2 h-20 w-auto object-scale-down my-auto mx-auto" />
+					<img src="/images/LUCID.png" class="col-span-2 h-20 w-auto object-scale-down my-auto mx-auto" />
+					<img src="/images/PLANATION.png" class="col-span-2 h-20 w-auto object-scale-down my-auto mx-auto" />
+					<img src="/images/JAM.png" class="col-span-2 h-20 w-auto object-scale-down my-auto mx-auto" />
+					<img src="/images/BLUER.png" class="col-span-2 h-20 w-auto object-scale-down my-auto mx-auto" />
+					<img src="/images/RAINSTORM.png" class="col-span-2 h-20 w-auto object-scale-down my-auto mx-auto" />
+					<img
+						src="/images/BONJOUR copy.png"
+						class="col-span-2 h-20 w-auto object-scale-down my-auto mx-auto"
+					/>
+				</div>
+				<div
+					class="px-5 lg:px-40 lg:px-10 grid grid-cols-12 gap-5 space-y-5 lg:gap-10 pt-20 hidden"
+					id="logo-2"
+				>
+					<img src="/images/HETA.png" class="col-span-2 h-20 w-auto object-scale-down my-auto mx-auto" />
+					<img src="/images/SYNAPSE.png" class="col-span-2 h-20 w-auto object-scale-down my-auto mx-auto" />
+					<img src="/images/GAMELOFT.png" class="col-span-2 h-20 w-auto object-scale-down my-auto mx-auto" />
+					<img src="/images/ZODIAC.png" class="col-span-2 h-20 w-auto object-scale-down my-auto mx-auto" />
+					<img src="/images/BN.png" class="col-span-2 h-20 w-auto object-scale-down my-auto mx-auto" />
+					<img
+						src="/images/VINAMATION.png"
+						class="col-span-2 h-20 w-auto object-scale-down my-auto mx-auto"
+					/>
+					<img src="/images/NC.png" class="col-span-2 h-20 w-auto object-scale-down my-auto mx-auto" />
+					<img src="/images/OPIM.png" class="col-span-2 h-20 w-auto object-scale-down my-auto mx-auto" />
+					<img src="/images/SILVER.png" class="col-span-2 h-20 w-auto object-scale-down my-auto mx-auto" />
+					<img src="/images/GLASSEGG.png" class="col-span-2 h-20 w-auto object-scale-down my-auto mx-auto" />
+					<img src="/images/Dw.png" class="col-span-2 h-20 w-auto object-scale-down my-auto mx-auto" />
+				</div>
+			</section>
+
+			<section id="video" class="relative p-3">
+				<div class="flex justify-center">
+					<img class="pt-10 pt-32 lg:pt-32 lg:px-40" src="/images/box-tu-van-blue.png" alt="Ưu đãi" />
+				</div>
+				<div
+					class="absolute flex flex-wrap -translate-y-20 translate-x-5 md:left-1/3 md:translate-x-20 md:-translate-y-52 lg:flex-nowrap lg:left-1/3 lg:translate-x-32 lg:-translate-y-72"
+				>
+					<div class="pl-28 md:p-0 w-96 flex flex-col md:gap-5" style="font-family: archivo">
+						<h1
+							class="text-xl md:text-5xl bg-gradient-to-t from-[#313fa5] to-[#17a4d0] text-gradient font-extrabold"
+							style="line-height: 1.25"
+						>
+							NHẬN TƯ VẤN TẠI ĐÂY
+						</h1>
+						<h3 class="text-xs md:text-xl break-words">
+							Tìm hiểu lộ trình học tập, học phí, cơ hội nghề nghiệp,...
+						</h3>
+					</div>
+				</div>
+				<div id="getfly-optin-form-iframe-1691138701488"></div>
+				<script type="text/javascript">
+					(function () {
+						var r = window.document.referrer != "" ? window.document.referrer : window.location.origin;
+						var regex = /(https?:\/\/.*?)\//g;
+						var furl = regex.exec(r);
+						r = furl ? furl[0] : r;
+						var f = document.createElement("iframe");
+						const url_string = new URLSearchParams(window.location.search);
+						var utm_source, utm_campaign, utm_medium, utm_content, utm_term, utm_user, utm_account;
+						if (
+							(!url_string.has("utm_source") || url_string.get("utm_source") == "") &&
+							document.cookie.match(new RegExp("utm_source" + "=([^;]+)")) != null
+						) {
+							r += "&" + document.cookie.match(new RegExp("utm_source" + "=([^;]+)"))[0];
+						} else {
+							r +=
+								url_string.get("utm_source") != null
+									? "&utm_source=" + url_string.get("utm_source")
+									: "";
+						}
+						if (
+							(!url_string.has("utm_campaign") || url_string.get("utm_campaign") == "") &&
+							document.cookie.match(new RegExp("utm_campaign" + "=([^;]+)")) != null
+						) {
+							r += "&" + document.cookie.match(new RegExp("utm_campaign" + "=([^;]+)"))[0];
+						} else {
+							r +=
+								url_string.get("utm_campaign") != null
+									? "&utm_campaign=" + url_string.get("utm_campaign")
+									: "";
+						}
+						if (
+							(!url_string.has("utm_medium") || url_string.get("utm_medium") == "") &&
+							document.cookie.match(new RegExp("utm_medium" + "=([^;]+)")) != null
+						) {
+							r += "&" + document.cookie.match(new RegExp("utm_medium" + "=([^;]+)"))[0];
+						} else {
+							r +=
+								url_string.get("utm_medium") != null
+									? "&utm_medium=" + url_string.get("utm_medium")
+									: "";
+						}
+						if (
+							(!url_string.has("utm_content") || url_string.get("utm_content") == "") &&
+							document.cookie.match(new RegExp("utm_content" + "=([^;]+)")) != null
+						) {
+							r += "&" + document.cookie.match(new RegExp("utm_content" + "=([^;]+)"))[0];
+						} else {
+							r +=
+								url_string.get("utm_content") != null
+									? "&utm_content=" + url_string.get("utm_content")
+									: "";
+						}
+						if (
+							(!url_string.has("utm_term") || url_string.get("utm_term") == "") &&
+							document.cookie.match(new RegExp("utm_term" + "=([^;]+)")) != null
+						) {
+							r += "&" + document.cookie.match(new RegExp("utm_term" + "=([^;]+)"))[0];
+						} else {
+							r += url_string.get("utm_term") != null ? "&utm_term=" + url_string.get("utm_term") : "";
+						}
+						if (
+							(!url_string.has("utm_user") || url_string.get("utm_user") == "") &&
+							document.cookie.match(new RegExp("utm_user" + "=([^;]+)")) != null
+						) {
+							r += "&" + document.cookie.match(new RegExp("utm_user" + "=([^;]+)"))[0];
+						} else {
+							r += url_string.get("utm_user") != null ? "&utm_user=" + url_string.get("utm_user") : "";
+						}
+						if (
+							(!url_string.has("utm_account") || url_string.get("utm_account") == "") &&
+							document.cookie.match(new RegExp("utm_account" + "=([^;]+)")) != null
+						) {
+							r += "&" + document.cookie.match(new RegExp("utm_account" + "=([^;]+)"))[0];
+						} else {
+							r +=
+								url_string.get("utm_account") != null
+									? "&utm_account=" + url_string.get("utm_account")
+									: "";
+						}
+						r += "&full_url=" + encodeURIComponent(window.location.href);
+						f.setAttribute(
+							"src",
+							"https://maac.getflycrm.com/api/forms/viewform/?key=74gpqKq7wEHG35YnzG8SnwkqCNVLBnSOMx7KoOACLb01TLbjj4&referrer=" +
+								r
+						);
+						f.style.width = "100%";
+						f.style.height = "700px";
+						f.setAttribute("frameborder", "0");
+						f.setAttribute("marginheight", "0");
+						f.setAttribute("marginwidth", "0");
+						var s = document.getElementById("getfly-optin-form-iframe-1691138701488");
+						s.appendChild(f);
+					})();
+				</script>
+
+				<div class="flex justify-center pt-48 pb-20 lg:px-64">
+					<div style="width: 977px; height: 550px" class="relative frame-video lg:px-10 lg:py-12">
+						<iframe
+							class="z-10"
+							style="height: 100%; width: 100%"
+							src="https://www.youtube.com/embed/HkVZeB2Qwe0"
+							title="YouTube video player"
+							frameborder="0"
+							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+							allowfullscreen
+						></iframe>
+					</div>
+				</div>
+			</section>
+
+			<footer class="bg-black p-10">
+				<div class="flex justify-center gap-5 lg:gap-10">
+					<img src="/images/logo.webp" class="h-10 w-auto my-auto lg:h-auto" />
+					<div class="flex flex-col" style="font-family: grotesk">
+						<span class="text-[#ffcb0e] tracking-widest">HỌC VIỆN KỸ XẢO ĐIỆN ẢNH & HOẠT HÌNH MAAC</span>
+						<span class="mt-3 text-white tracking-widest"
+							>24 Phan Liêm, Phường Đa Kao, Quận 1, TP.Hồ Chí Minh</span
+						>
+						<span class="text-white tracking-widest"
+							>Hotline: 1800 2096 | maac@approtrain.com | www.maac.edu.vn</span
+						>
+					</div>
+				</div>
+			</footer>
+		</main>
+		<script src="script.js"></script>
+	</body>
+</html>
